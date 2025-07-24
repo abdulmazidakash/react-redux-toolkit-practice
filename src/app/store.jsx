@@ -2,6 +2,7 @@
 // import counterReducer from "../features/counter/counterSlice";
 
 import { configureStore } from "@reduxjs/toolkit";
+import { bookReducer } from "../features/bookSlice";
 
 // const store = configureStore({
 // 	reducer: {
@@ -10,9 +11,9 @@ import { configureStore } from "@reduxjs/toolkit";
 // });
 
 // export default store;
-
-export const store = configureStore({
+const store = configureStore({
 	reducer: {
-		books: bookReducer,
+		book: bookReducer,
 	}
-})
+});
+export default store;
