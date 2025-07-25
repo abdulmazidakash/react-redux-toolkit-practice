@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteBook } from '../features/bookSlice';
 
-export default function BookList() {
+export default function BookList({onHandleEdit}) {
 	const {books} = useSelector((state)=>state.booksR);
 	const dispatch = useDispatch();
 
@@ -21,7 +21,9 @@ export default function BookList() {
 
 				return (<li key={book.id} className='my-4'>
 					{book.title} by {book.author} - ${book.price} - {book.quantity} pcs
+					<button onClick={()=>onHandleEdit(book)} className='ml-4 cursor-pointer p-2 rounded-lg bg-sky-900 text-white'>Edit</button>
 					<button onClick={()=>handleDelete(book.id)} className='ml-4 cursor-pointer p-2 rounded-lg bg-sky-900 text-white'>Delete</button>	
+	
 				</li>
 			);
 			})}
