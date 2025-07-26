@@ -45,11 +45,11 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              to={"/users"}
+              to={"/rtk"}
               className={pathname === "/users" ? "bg-green-500 font-bold  border rounded-full border-gray-200 shadow px-4 py-2 text-white" : "border rounded-full border-gray-200 shadow px-4 py-2 bg-base-100"}
             >
               {" "}
-              <GiBrain size={18}></GiBrain> User
+              <GiBrain size={18}></GiBrain> Rtk
             </Link>
           </li>
           
