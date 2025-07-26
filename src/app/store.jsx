@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "../features/counter/counterSlice";
-import postsReducer from "../features/posts/postsSlice";
+// import postsReducer from "../features/posts/postsSlice";
+import productReducer from "../features/products/productSlice";
 // import  bookReducer  from "../features/bookSlice";
 const store = configureStore({
 	reducer: {
 		counter: counterReducer,
 		// booksR: bookReducer,
-		posts: postsReducer,
+		// posts: postsReducer,
+		productsR: productReducer,
 	},
 });
 
